@@ -1,0 +1,13 @@
+services:
+  explainshell:
+    image: bitflight-devops/explainshell:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: explainshell
+    ports:
+      - '5000:5043'
+    env_file: .env
+    # volumes:
+    #   - /var/run/docker.sock:/var/run/docker.sock
+    #   - ./:/_work
